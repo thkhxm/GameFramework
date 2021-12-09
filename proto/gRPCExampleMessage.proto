@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "pkg/example/grpc/proto/message";
+
+package message;
+//
+
+message HelloReq{
+  string context = 1;
+}
+
+message HelloReply{
+  string callback =1;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option go_package = "pkg/example/grpc/proto/service";
+
+package service;
+import "gRPCExampleMessage.proto";
+//
+service gRPCExampleService{
+  rpc SayHello(message.HelloReq) returns (message.HelloReply) {}
+}
+
