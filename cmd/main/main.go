@@ -15,8 +15,9 @@ type ExampleGrpcImpl struct {
 }
 
 func (e *ExampleGrpcImpl) SayHello(ctx context.Context, req *message.HelloReq) (*message.HelloReply, error) {
-	//TODO implement me
-	return nil, nil
+	fmt.Printf("rpc is done:%v", req.Context)
+	result := &message.HelloReply{Callback: "is ok"}
+	return result, nil
 }
 
 func main() {
@@ -37,4 +38,5 @@ func main() {
 		fmt.Printf("failed to serve: %v", err)
 		return
 	}
+	fmt.Printf("listen success: %v", "grpc")
 }
